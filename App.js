@@ -1,14 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import UsernameandPassword from './components/UsernameandPassword'
 
-import User from './components/User';
 
 const App = () => {
   return (
-    <User/>
+    <View>
+    <UsernameandPassword/>
+    </View>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+  justifyContent: "center",
+  alignItems: "center",
+  flex: 1,
+  }
+})
