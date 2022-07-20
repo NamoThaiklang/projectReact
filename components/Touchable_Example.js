@@ -1,42 +1,52 @@
-import { StyleSheet, Text, View ,TouchableHighlight,TouchableNativeFeedback,TouchableOpacity,SafeAreaView,TouchableWithoutFeedback} from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+  SafeAreaView,
+  TouchableWithoutFeedback,
+} from "react-native";
 import React from "react";
 
 const Touchable_Example = () => {
-
-    const onPress = (msg)=>{
-        alert('Alert for : '+msg);
-    }
+  const onPress = (msg) => {
+    alert("Alert for : " + msg);
+  };
 
   return (
-    <SafeAreaView style={{flex:1}}>
-    <View style = {styles.container}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <TouchableNativeFeedback
+          style={styles.button}
+          onPress={() => onPress("TouchableNativeFeedback Pressed")}
+        >
+          <Text>Toucable Native FeedBack(Only Android) </Text>
+        </TouchableNativeFeedback>
 
-      <TouchableNativeFeedback
-      style = {styles.button}
-      onPress={()=>onPress('TouchableNativeFeedback Pressed')}>
-            <Text>Toucable Native FeedBack(Only Android) </Text>
-      </TouchableNativeFeedback>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => onPress("TouchableHighlight Pressed")}
+        >
+          <Text>TouchableHighlight</Text>
+        </TouchableHighlight>
 
-      <TouchableHighlight
-      style = {styles.button}
-      onPress={()=>onPress('TouchableHighlight Pressed')}>
-            <Text>TouchableHighlight</Text>
-      </TouchableHighlight>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => onPress("TouchableOpacity Pressed")}
+        >
+          <Text>TouchableOpacity</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-      style = {styles.button}
-      onPress={()=>onPress('TouchableOpacity Pressed')}>
-            <Text>TouchableOpacity</Text>
-      </TouchableOpacity>
-
-      <TouchableWithoutFeedback
-      onPress={()=>onPress('TouchableWithoutFeedback Pressed')}>
-        <View  style = {styles.button}>
+        <TouchableWithoutFeedback
+          onPress={() => onPress("TouchableWithoutFeedback Pressed")}
+        >
+          <View style={styles.button}>
             <Text>TouchableWithoutFeedback</Text>
-        </View>
-      </TouchableWithoutFeedback>
-
-    </View>
+          </View>
+        </TouchableWithoutFeedback>
+      </View>
     </SafeAreaView>
   );
 };
