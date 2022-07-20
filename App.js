@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
-import UsernameandPassword from './components/UsernameandPassword'
+import UserNamePassword from './components/UserNamePassword'
 
 
 const App = () => {
   return (
     <View>
-    <UsernameandPassword/>
+    <UserNamePassword/>
     </View>
   )
 }
